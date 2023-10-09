@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun irAVentana2() {
         var miIntent: Intent = Intent(this, Ventana2::class.java)//Comunicamos con Ventana2
+        miIntent.putExtra("nombre", binding.cajaNombre.text.toString())
+        miIntent.putExtra("edad", binding.cajaEdad.text.toString())
         startActivity(miIntent)
     }
 }
